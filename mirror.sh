@@ -3,7 +3,7 @@ set -eu
 
 /setup-ssh.sh
 
-echo ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa
 
 export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -l $INPUT_SSH_USERNAME"
 git remote add mirror "$INPUT_TARGET_REPO_URL"
